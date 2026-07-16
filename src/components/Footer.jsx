@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/logo.png'
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -29,19 +30,19 @@ function Footer() {
                         <h4 className="menu-block-heading uppercase font-semibold mb-[20px]">Menu</h4>
                         <ul className="menu-links--wrapper">
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">About Us</a>
+                                <Link to="/about">About Us</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Our Brands</a>
+                                <Link to="/brands">Our Brands</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Outlets</a>
+                                <Link to="/outlets">Outlets</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
                                 <a href="#">Gallary</a>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Contact</a>
+                                <Link to="/contact">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -49,16 +50,16 @@ function Footer() {
                         <h4 className="categories-block-heading uppercase font-semibold mb-[20px]">Categories</h4>
                         <ul className="menu-links--wrapper">
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Bath Products</a>
+                                <Link to="/bath-products">Bath Products</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Tiles</a>
+                                <Link to="/tiles">Tiles</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Lights</a>
+                                <Link to="/lights">Lights</Link>
                             </li>
                             <li className="menu-link-element mb-[10px] text-[16px]">
-                                <a href="#">Other Products</a>
+                                <Link to="/others">Other Products</Link>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +67,7 @@ function Footer() {
                         <h4 className="visit-block-heading uppercase font-semibold mb-[20px]">Visit</h4>
                         <p className="visit-address">Indore, Madhya Pradesh <br /> India</p>
                         <br />
-                        <a href="#" className="view-all-outlet uppercase tracking-[0]">View All Outlets →</a>
+                        <Link to="/outlets" className="view-all-outlet uppercase tracking-[0]">View All Outlets →</Link>
                     </div>
                     <div className="footer-contact-block w-[17.5%]">
                         <h4 className="contact-block-heading uppercase font-semibold mb-[20px]">Contact</h4>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function MultipleCardGrid({cardData}) {
     const card_data = cardData
@@ -19,9 +20,9 @@ function MultipleCardGrid({cardData}) {
                 ))}
             </div>
             <div className="button-wrapper flex justify-center mt-[2rem] mb-[2rem]">
-                <a href="/outlets">
+                <Link to="/outlets">
                     <button className="button button-primary outlet-button uppercase cursor-pointer">View All Outlet</button>
-                </a>
+                </Link>
             </div>
         </div>
     </section>

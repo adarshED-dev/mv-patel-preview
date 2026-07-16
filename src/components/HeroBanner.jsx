@@ -1,4 +1,5 @@
 import video from '../assets/slideshow1.mp4';
+import { Link } from "react-router-dom";
 
 
 function HeroBanner({overlayData}){
@@ -29,14 +30,14 @@ function HeroBanner({overlayData}){
                     {overlayData.buttonAvailability ? (
                         <div className="button-groups flex justify-center gap-[1rem]">
                         <button className="primary-button button uppercase cursor-pointer">
-                            <a href="/brands">
+                            <Link to="/brands">
                                 Explore Brands
-                            </a>
+                            </Link>
                         </button>
                         <button className="secondary-button button uppercase cursor-pointer">
-                            <a href="/outlets">
+                            <Link to="/outlets">
                                 Visit our showrooms
-                            </a>
+                            </Link>
                         </button>
                     </div>
                     ) : null}

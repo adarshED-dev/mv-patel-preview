@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function Map({mapData}) {
   return (
@@ -20,9 +21,9 @@ function Map({mapData}) {
                     <p className="subheading--map-cont uppercase">{mapData.heading}</p>
                     <h3 className="heading--map-cont text-[2rem]">{mapData.subHeading}</h3>
                     <p className="description--map-cont my-[10px]">{mapData.description}</p>
-                    <a href={mapData.buttonURL}>
+                    <Link to={mapData.buttonURL}>
                         <button className="tertiary-button button uppercase cursor-pointer">{mapData.buttonText}</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

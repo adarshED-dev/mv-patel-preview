@@ -1,4 +1,5 @@
 // imagePosition
+import { Link } from "react-router-dom";
 
 function ImageWithContent({heading, collectionLink, icon, imageSrc, imagePosition}){
     return (
@@ -11,9 +12,9 @@ function ImageWithContent({heading, collectionLink, icon, imageSrc, imagePositio
                         </div>
                         <h2 className="content-heading-main category-heading-with--bottomBorder text-[#fff] text-[40px] uppercase text-[300] mb-[20px] relative w-[max-content]">{ heading }</h2>
                         <button className="button transparet-button button--content uppercase tracking-[1px]">
-                            <a href={collectionLink}>
+                            <Link to={collectionLink}>
                                 Explore Brands →
-                            </a>
+                            </Link>
                         </button>
                     </div>
                 </div>
