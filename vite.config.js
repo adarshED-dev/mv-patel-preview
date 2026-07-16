@@ -5,4 +5,10 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    allowedHosts: ['mv-patel-preview-i4kn.onrender.com'],
+  },
+  preview: {
+    allowedHosts: ['mv-patel-preview-i4kn.onrender.com'],
+  },
 })
