@@ -1,0 +1,225 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face{
+    src:url(./fonts/acuminPro.ttf);
+    font-family: acuminPro;
+    font-display: swap;
+}
+@font-face{
+    src:url(./fonts/greenwhich.otf);
+    font-family: greenwhich;
+    font-display: swap;
+}
+
+:root{
+    --light-font: greenwhich;
+    --body-font: greenwhich, sans-serif;
+    --brown-text-color: #936e42;
+}
+
+*{
+    font-family: var(--body-font);
+}
+
+.button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    font-size: 14px;}
+
+.primary-button{
+    color: white;
+    background-color: transparent;
+}
+.secondary-button{
+    color: black;
+    background-color: white;}
+
+.transparet-button{
+    padding-left: 0;
+    color: white;
+    background-color: transparent;
+    border: none;}
+
+p,
+li,
+div,
+span{
+    color: white;}
+
+h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 100;}
+
+.overlay-content{
+    color: white;
+    position: absolute;
+    z-index: 99;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+
+.para-lists{
+    list-style-type: none;}
+
+input.search{
+    outline: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+
+input.search::placeholder{
+    text-transform: uppercase;
+}
+
+.image-card--grid{
+    grid-template-columns: repeat(8, 1fr);}
+
+.card-li.multiple-image-single{
+    border-right: 1px solid rgba(255, 255, 255, 0.377);
+}
+
+.lower-footer.footer-down{
+    border-top: 1px solid rgba(255, 255, 255, 0.377);
+}
+
+.category-heading-with--bottomBorder::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: #ffffff78;
+    bottom: -10%;
+    left: 0.2%;}
+
+.card-heading::before,
+.heading--map-cont::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-color: #936e42;
+    bottom: -10%;
+    left: 0.2%;
+}
+
+.main-image-widthContent,
+.border-bottom{
+    border-bottom: 1px solid #ffffff23;}
+
+a{
+    transition: all 0.4s ease;}
+
+a:hover{
+    color: #ffffff98;  
+
+}
+
+.separator-round{
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50px;
+}
+
+.card-overlay--content.multiplecard-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #000000 50%, transparent);
+    width: 100%;
+    padding: 15px;
+}
+
+.overlay-map--content{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    border-top: 1px solid #ffffff23;
+    border-bottom: 1px solid #ffffff23;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #08213a;
+    width: max-content;
+    height: 100%;
+    padding: 20px 30px;}
+
+.main-card.showroom-data{
+    transition: all 0.4s ease;}
+
+.main-card.showroom-data:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 14px 1px #ffffff36;}
+
+.grid-twoimage-grabber{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;}
+
+.subheading--map-cont{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--brown-text-color);}
+
+.icons-sect--heading{
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: var(--brown-text-color);}
+
+.brands-card-multicolumn,
+.bottom-full-catalogue--block{
+    border: 1px solid #ffffff23;
+    border-radius: 12px;
+}
+
+.card-subtext,
+.card-count,
+.outlet--subtitle-heading{
+    color: var(--brown-text-color);
+}
+
+.multicolumn--button-brown,
+.download-full-catalogue-button,
+.tertiary-button{
+    background-color: #936e42;
+    color: white;
+    border: 2px solid #936e42;
+}
+
+.main-footer--parent{
+    border-top: 1px solid #ffffff23;
+}
+
+.grid-temp--2x{
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+}
+
+.outline--wrapper-multicolumn .outlet-card{
+    border: 1px solid #ffffff23;
+}
+
+
+.outlet--subtitle-heading::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 50%;
+    left: 25%;
+    background-color: #ffffff23;
+    transform: translate(-50%, -50%);
+}
+.outlet--subtitle-heading::before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 50%;
+    right: -5%;
+    background-color: #ffffff23;
+    transform: translate(-50%, -50%);
+}
