@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function StickyHeader(){
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +24,7 @@ function StickyHeader(){
                                 </li>
                             <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
                                 <a href="/about">About</a>
+                                <Link to="/about">About</Link>
                             </li>
                         <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
                             <a href="/contact">Contact</a>
