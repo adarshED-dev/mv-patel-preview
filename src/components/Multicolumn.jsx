@@ -46,7 +46,7 @@ function Multicolumn({multicolumnDet}) {
                 </div>
                 <div className="left-block button-box w-[30%] p-[20px] text-center">
                     <button className="download-full-catalogue-button button uppercase tracking-[1px]">
-                        Download Full Catalogue  <i class="fa-solid fa-download"></i>
+                        Download Full Catalogue  <i className="fa-solid fa-download"></i>
                     </button>
                 </div>
             </div>

@@ -1,43 +1,89 @@
 import logo from '../assets/logo.png'
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
-function StickyHeader(){
-    return (
-        <header className="header-wrapper fixed top-[0] z-[9] w-full p-[1rem]">
-            <div className="inner-wrapper flex w-full justify-between items-center">
-                <div className="menu-items flex w-[32%]">
-                    <ul className="menu--lists pl-[20px] flex justify-left gap-[30px]">
-                        <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
-                            <Link to="/">Home</Link>
-                        </li>
-                            <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
-                                <Link to="/brands">Brands</Link>
-                            </li>
-                                <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
-                                    <Link to="/outlets">Outlets</Link>
-                                </li>
-                            <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
-                                <Link to="/about">About</Link>
-                            </li>
-                        <li className="li-menu uppercase px-[10px] text-[#fff] tracking-[1px]">
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="header-logo w-[32%] flex justify-center">
-                    <div className="image-wrapper">
-                        <Link to="/">
-                            <img src={logo} alt="mv-patel-logo" width="200px" height="auto" />
-                        </Link>
-                    </div>
-                </div>
-                <div className="header-search w-[32%]">
-                    <div className="search-input w-[80%] m-auto">
-                        <input type="text" className="search w-full" placeholder="Search" />
-                    </div>
-                </div>
-            </div>
-        </header>
-    )
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Brands", href: "/brands" },
+  { label: "Outlets", href: "/outlets" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+function StickyHeader() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`w-full header-wrapper fixed top-0 z-[9] w-full transition-all duration-300 ${
+        isScrolled ? "bg-black/70 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-4"
+      }`}
+    >
+      <div className="page-width inner-wrapper mx-auto flex w-full max-w-7xl items-center justify-between px-6">
+        {/* Logo — left */}
+        <div className="header-logo shrink-0">
+          <a href="/" className="inline-block transition-transform duration-300 hover:scale-105">
+            <img src={logo} alt="mv-patel-logo" className="w-[13rem] h-auto" />
+          </a>
+        </div>
+
+        {/* Desktop nav — right */}
+        <nav className="hidden md:block">
+          <ul className="menu--lists flex items-center gap-8">
+            {NAV_LINKS.map((link, i) => (
+              <li key={i} className="li-menu">
+                <a
+                  href={link.href}
+                  className="group relative uppercase tracking-[1px] text-sm text-white transition-colors duration-300 hover:text-blue-300"
+                >
+                  {link.label}
+                  <span className="absolute left-0 -bottom-1 h-px w-0 bg-blue-300 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Mobile menu toggle */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+          className="md:hidden text-white transition-transform duration-300 active:scale-90"
+        >
+          {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </div>
+
+      {/* Mobile nav dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
+          mobileOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-1 bg-black/80 backdrop-blur-md py-4">
+          {NAV_LINKS.map((link, i) => (
+            <li key={i} className="li-menu w-full text-center">
+              <a
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block w-full py-3 uppercase tracking-[1px] text-sm text-white transition-colors duration-300 hover:bg-white/10 hover:text-blue-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
+  );
 }
-export default StickyHeader
+
+export default StickyHeader;

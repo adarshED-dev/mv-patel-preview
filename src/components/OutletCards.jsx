@@ -16,8 +16,8 @@ function OutletCards({subtitleHeading, outletDet}) {
                                 <p className="card-count text-[3rem] font-semibold">{outlet.count}</p>
                                 <h2 className="card-heading font-semibold text-[2rem] my-[10px] mb-[20px] relative">{outlet.heading}</h2>
                                 <p className="card-description w-[60%] mb-[20px]">{outlet.description}</p>
-                                <p className="card-timings my-[20px]"><i class="fa-regular fa-clock"></i> {outlet.timing}</p>
-                                <p className="card-mobile mb-[20px]"><i class="fa-solid fa-phone"></i> {outlet.mobile}</p>
+                                <p className="card-timings my-[20px]"><i className="fa-regular fa-clock"></i> {outlet.timing}</p>
+                                <p className="card-mobile mb-[20px]"><i className="fa-solid fa-phone"></i> {outlet.mobile}</p>
                                 <a href={outlet.buttonURL}>
                                     <button className="tertiary-button button uppercase w-[60%] tracking-[1px] cursor-pointer">{outlet.buttonText} <span className="iconArrow"></span></button>
                                 </a>

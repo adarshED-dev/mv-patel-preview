@@ -6,27 +6,27 @@ function Footer() {
   return (
     <footer className='main-footer--parent bg-[#081B33]'>
         <div className="inner-footer--wrapper">
-            <div className="upper-footer footer-up p-[2rem]">
-                <div className="footer-blocks-wrapper w-full flex justify-between">
-                    <div className="website-info w-[30%]">
+            <div className="upper-footer footer-up px-5 py-10 md:p-8 lg:p-10">
+                <div className="footer-blocks-wrapper w-full flex flex-col sm:flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-between gap-10 md:gap-8">
+                    <div className="website-info w-full md:w-[48%] lg:w-[30%]">
                         <img src={image} alt="footer-logo-alt" width="50%" height="auto" />
                         <p className="website-desc-para mb-[10px]">Curating the world's finest bath, tile and <br />lighting brands for exceptional spaces.</p>
                         <div className="social-icons flex w-full justify-left gap-[1rem] my-[10px]">
                             <li className="icons icon-instagram list-none">
-                                <i class="fa-brands fa-instagram text-[20px]"></i>
+                                <i className="fa-brands fa-instagram text-[20px]"></i>
                             </li>
                             <li className="icons icon-facebook list-none">
-                                <i class="fa-brands fa-facebook text-[20px]"></i>
+                                <i className="fa-brands fa-facebook text-[20px]"></i>
                             </li>
                             <li className="icons icon-pinterest list-none">
-                                <i class="fa-brands fa-pinterest text-[20px]"></i>
+                                <i className="fa-brands fa-pinterest text-[20px]"></i>
                             </li>
                             <li className="icons icon-youtube list-none">
-                                <i class="fa-brands fa-youtube text-[20px]"></i>
+                                <i className="fa-brands fa-youtube text-[20px]"></i>
                             </li>
                         </div>
                     </div>
-                    <div className="footer-menu w-[17.5%]">
+                    <div className="footer-menu w-full md:w-[17.5%]">
                         <h4 className="menu-block-heading uppercase font-semibold mb-[20px]">Menu</h4>
                         <ul className="menu-links--wrapper">
                             <li className="menu-link-element mb-[10px] text-[16px]">
@@ -46,7 +46,7 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-categories w-[17.5%]">
+                    <div className="footer-categories w-full md:w-[17.5%]">
                         <h4 className="categories-block-heading uppercase font-semibold mb-[20px]">Categories</h4>
                         <ul className="menu-links--wrapper">
                             <li className="menu-link-element mb-[10px] text-[16px]">
@@ -63,32 +63,32 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-visit w-[17.5%]">
+                    <div className="footer-visit w-full md:w-[17.5%]">
                         <h4 className="visit-block-heading uppercase font-semibold mb-[20px]">Visit</h4>
                         <p className="visit-address">Indore, Madhya Pradesh <br /> India</p>
                         <br />
                         <Link to="/outlets" className="view-all-outlet uppercase tracking-[0]">View All Outlets →</Link>
                     </div>
-                    <div className="footer-contact-block w-[17.5%]">
+                    <div className="footer-contact-blockw-full md:w-[17.5%]">
                         <h4 className="contact-block-heading uppercase font-semibold mb-[20px]">Contact</h4>
                         <div className="contact-blocks--wrapper">
                             <div className="contact-block--1 mb-[10px] text-[16px]">
-                               <i class="fa-solid fa-phone"></i>  +91 98989 98098
+                               <i className="fa-solid fa-phone"></i>  +91 98989 98098
                             </div>
                             <div className="contact-block--2 mb-[10px] text-[16px]">
-                               <i class="fa-solid fa-envelope"></i>  hello@mvpatelco.com
+                               <i className="fa-solid fa-envelope"></i>  hello@mvpatelco.com
                             </div>
                             <div className="contact-block--3 mb-[10px] text-[16px]">
-                                <i class="fa-solid fa-calendar"></i>  Mon - Sat: 10:00AM - 8:00PM
+                                <i className="fa-solid fa-calendar"></i>  Mon - Sat: 10:00AM - 8:00PM
                             </div>
                             <div className="contact-block--4 mb-[10px] text-[16px]">
-                                <i class="fa-solid fa-calendar"></i>  Sunday: 10:00AM - 8:00PM
+                                <i className="fa-solid fa-calendar"></i>  Sunday: 10:00AM - 8:00PM
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="lower-footer footer-down px-[5rem] py-[10px] flex justify-between">
+            <div className="lower-footer footer-down px-2 py-2 md:px-[5rem] md:py-[10px] flex justify-between">
                 <div className="copyright-text text-[#fff] uppercase text-[14px] tracking-[0.6px]">©2026 MV patel & Co. All Right Reserved</div>
                 <div className="footer-policies flex gap-[20px]">
                     <li className="privacy-policy policy-text list-none text-[#fff] uppercase text-[14px]">
